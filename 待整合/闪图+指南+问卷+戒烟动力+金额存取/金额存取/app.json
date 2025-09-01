@@ -1,0 +1,13 @@
+{
+    "pages": [
+      "pages/money/money"
+    ],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTitleText": "戒烟动力",
+      "navigationBarTextStyle": "black"
+    },
+    "style": "v2"
+  }
+  

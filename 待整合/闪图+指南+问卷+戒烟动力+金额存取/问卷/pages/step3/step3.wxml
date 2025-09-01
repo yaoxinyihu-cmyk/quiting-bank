@@ -1,0 +1,28 @@
+<page-header showBack="true"></page-header>
+
+<view class="badge-container">
+  <image class="badge" src="/images/badge.png"></image>
+</view>
+
+<view class="form">
+  <text class="form-label">请输入您的戒烟口号：</text>
+  <input class="input-line" placeholder="请输入戒烟口号" bindinput="onSloganInput" value="{{slogan}}" />
+
+  <text class="form-label">选择您自己的戒烟日：</text>
+  <picker mode="date" bindchange="onStartDateChange">
+    <view class="input-line">
+      <text>{{startDate || '请选择日期'}}</text>
+      <image class="icon-arrow" src="/images/calendar.png"></image>
+    </view>
+  </picker>
+
+  <text class="form-label">至：</text>
+  <picker mode="date" bindchange="onEndDateChange">
+    <view class="input-line">
+      <text>{{endDate || '请选择日期'}}</text>
+      <image class="icon-arrow" src="/images/calendar.png"></image>
+    </view>
+  </picker>
+</view>
+
+<button class="next-btn" bindtap="finish">完成</button>

@@ -1,0 +1,4 @@
+<view class="container">
+  <view class="title">首页示例</view>
+  <navigator url="/pages/guide/guide" class="link">进入戒烟指南</navigator>
+</view>

@@ -1,0 +1,12 @@
+{
+    "pages": [
+      "pages/splash/splash",
+      "pages/intro/intro"
+    ],
+    "window": {
+      "navigationBarTitleText": "戒烟银行",
+      "navigationBarTextStyle": "black",
+      "backgroundColor": "#ffffff"
+    }
+  }
+  

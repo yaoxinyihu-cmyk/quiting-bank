@@ -1,0 +1,11 @@
+.container {
+    padding: 20px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .link {
+    color: #07c160;
+  }
+  

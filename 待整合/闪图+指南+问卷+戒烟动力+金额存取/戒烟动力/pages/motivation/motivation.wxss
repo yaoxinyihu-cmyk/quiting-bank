@@ -1,0 +1,185 @@
+.page {
+    position: relative;
+    background-color: #fff;
+    min-height: 100vh;
+  }
+  
+  /* 自定义导航栏整体背景 */
+  .nav-container {
+    width: 100%;
+    background-color: rgb(216, 216, 216); /* 统一颜色背景 */
+  }
+  
+  /* 导航栏内容区 */
+  .nav-content {
+    height: 44px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-back {
+    position: absolute;
+    left: 30rpx;
+    width: 33rpx;
+    height: 36rpx;
+  }
+  .nav-title {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 日期标题 */
+  .date-title {
+    position: absolute;
+    top: 140px;
+    left: 130rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 日期输入框 */
+  .date-input {
+    position: absolute;
+    top: 181px;
+    left: 30rpx;
+    right: 30rpx;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 12rpx;
+    background: #fff;
+    padding: 0 20rpx;
+  }
+  .input-text {
+    flex: 1;
+    font-size: 26rpx;
+    color: #999;
+  }
+  .calendar-icon {
+    width: 36rpx;
+    height: 36rpx;
+  }
+  
+  /* 装饰香烟图 */
+  .smoke-decor {
+    position: absolute;
+    top: 163px;
+    right: 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+    opacity: 0.3;
+  }
+  
+  /* 口号标题 */
+  .slogan-title {
+    position: absolute;
+    top: 290px;
+    left: 220rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* 口号输入框 */
+  .slogan-input {
+    position: absolute;
+    top: 323px;
+    left: 30rpx;
+    right: 30rpx;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 12rpx;
+    background: #fff;
+    padding: 0 20rpx;
+  }
+  .slogan-input input {
+    flex: 1;
+    font-size: 26rpx;
+    color: #333;
+  }
+  
+  /* 留言板入口 */
+  .message-entry {
+    position: absolute;
+    top: 422px;
+    left: 30rpx;
+    display: flex;
+    align-items: center;
+  }
+  .message-icon {
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 8rpx;
+  }
+  .message-text {
+    font-size: 32rpx;
+    color: #333;
+  }
+  
+  /* 弹窗背景 */
+  .popup-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .popup {
+    width: 90%;
+    max-height: 80%;
+    background: #FDFBF5;
+    border-radius: 16rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+  }
+  .popup-scroll {
+    max-height: 100%;
+  }
+  
+  /* 留言卡片 */
+  .msg-card {
+    display: flex;
+    padding: 20rpx;
+    border-bottom: 1rpx solid #eee;
+  }
+  .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    object-fit: cover;
+  }
+  .msg-body {
+    flex: 1;
+  }
+  .msg-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8rpx;
+  }
+  .name {
+    font-weight: bold;
+    font-size: 26rpx;
+    color: #333;
+  }
+  .time {
+    font-size: 22rpx;
+    color: #aaa;
+  }
+  .text {
+    font-size: 24rpx;
+    line-height: 1.4;
+    color: #333;
+  }
+  

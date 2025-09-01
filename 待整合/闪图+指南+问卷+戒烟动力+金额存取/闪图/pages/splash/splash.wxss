@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    height: 100vh; /* 全屏高度 */
+  }
+  
+  .splash-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
