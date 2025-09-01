@@ -1,0 +1,154 @@
+<!-- pages/guide/guide.wxml -->
+<view class="container">
+  <!-- 顶部图片 -->
+  <image class="banner" src="/assets/quit_smoking.jpg" mode="widthFix"></image>
+
+  <!-- 主标题 -->
+  <view class="title">戒烟指南，助您开启健康新生活</view>
+
+  <!-- 可滚动的文字内容 -->
+  <scroll-view scroll-y="true" class="scroll-content">
+
+    <!-- 一、戒烟必要性 -->
+    <view class="section">
+      <view class="section-title">一、戒烟必要性</view>
+      <view class="qa">
+        <view class="q">Q：吸烟这么多年了，现在戒还来得及吗？</view>
+        <view class="a">
+          <text class="highlight">A：完全来得及！</text>
+          戒烟在任何时候都能获得健康收益。戒烟20分钟后，心率就会下降；12小时后，血液中的一氧化碳水平降至正常。
+          无论年龄多大，戒烟都能显著降低患心脏病、癌症、呼吸系统疾病的风险，并提高生活质量。
+          <text class="highlight">“戒烟最好的时间是十年前，其次是现在。”</text>
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟到底有哪些具体的好处</view>
+        <view class="a">
+          <text>健康改善：</text> 降低肺癌、喉癌、心脏病、中风、慢阻肺等风险；改善血液循环，增强免疫力。<br/>
+          <text>感官恢复：</text> 味觉和嗅觉会变得更敏锐，吃东西更香。<br/>
+          <text>形象提升：</text> 口气清新、牙齿变白、手指和皮肤上的烟渍减少，看起来更年轻。<br/>
+          <text>经济节省：</text> 节省下一笔可观的开销，可以用它来做更有意义的事。<br/>
+          <text>心灵自由：</text> 不再被烟瘾控制，重获自主权，充满成就感。
+        </view>
+      </view>
+    </view>
+
+    <!-- 二、准备与开始 -->
+    <view class="section">
+      <view class="section-title">二、准备与开始</view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟是突然“断舍离”好，还是慢慢减量好？</view>
+        <view class="a">
+          对于大多数成功戒烟者来说，<text class="highlight">“突然完全停止”</text> 的成功率更高。
+          逐渐减量容易延长痛苦过程，给自己留不吸的余地。设定一个“戒烟日”，从那天起一口不吸，是更果断有效的选择。
+          当然，个别尼古丁依赖极其严重者可在医生指导下采用减量法或使用替代品。
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟前需要做哪些准备？</view>
+        <view class="a">
+          <text>心理准备：</text> 明确并牢记你的戒烟原因（为了孩子、健康、省钱等）。<br/>
+          <text>告知他人：</text> 告诉家人、朋友和同事你的决定，争取他们的支持和监督。<br/>
+          <text>清理环境：</text> 扔掉所有香烟、打火机、烟灰缸，彻底清洗衣物和家具，去除烟味。<br/>
+          <text>制定计划：</text> 预计可能会遇到的挑战（如饭后、压力大时），并想好对策。<br/>
+          <text>寻求专业帮助：</text> 可以提前咨询医生，或在小程序上学习相关课程。
+        </view>
+      </view>
+    </view>
+
+    <!-- 三、应对戒断反应 -->
+    <view class="section">
+      <view class="section-title">三、应对戒断反应（核心部分）</view>
+
+      <view class="qa">
+        <view class="q">Q：戒断反应有哪些？一般会持续多久？</view>
+        <view class="a">
+          戒断反应是身体在适应没有尼古丁的过程，是正常的。主要包括：
+          <text class="highlight">强烈烟瘾、烦躁易怒、注意力不集中、失眠、焦虑、抑郁、食欲增加</text> 等。<br/>
+          <text>持续时间：</text> 峰值在戒断后1-2周，之后逐渐减弱，大部分生理症状在1个月内会基本消失。
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：烟瘾上来的时候，实在忍不住怎么办？</view>
+        <view class="a">
+          可以尝试 “4D法则”：<br/>
+          Delay（拖延）：告诉自己“再等10分钟”，烟瘾通常几分钟就会过去。<br/>
+          Deep Breathing（深呼吸）：做几次深长的呼吸，帮助放松。<br/>
+          Drink Water（喝水）：慢慢喝一杯冰水，占用双手，帮助代谢。<br/>
+          Do Something Else（做点别的事）：立刻换个环境，散步、刷牙、嚼口香糖、玩小游戏等。
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟后食欲大增，体重增加怎么办？</view>
+        <view class="a">
+          这是常见现象，因为味觉恢复和口欲转移。应对方法：<br/>
+          <text>健康零食：</text> 吃低热量健康食物，如胡萝卜条、黄瓜、水果、无糖酸奶。<br/>
+          <text>多喝水：</text> 保持身体水分充足。<br/>
+          <text>坚持运动：</text> 控制体重和缓解压力的有效方式。<br/>
+          <text>聚焦主要目标：</text> 成功戒烟后体重问题可再单独处理。
+        </view>
+      </view>
+    </view>
+
+    <!-- 四、防止复吸与坚持 -->
+    <view class="section">
+      <view class="section-title">四、防止复吸与坚持</view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟失败，复吸了怎么办？</view>
+        <view class="a">
+          <text class="highlight">千万不要自责或放弃！</text>
+          复吸是过程的一部分。<br/>
+          <text>分析原因：</text> 找出复吸的情境，如应酬、压力、饮酒等。<br/>
+          <text>吸取教训：</text> 将经历视为一次学习，制定防御策略。<br/>
+          <text>立即重启：</text> 立刻重新开始你的戒烟计划。
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：如何应对朋友递烟的社交压力？</view>
+        <view class="a">
+          提前准备好礼貌拒绝的话，例如：<br/>
+          “谢谢，不用了，我已经戒了。”<br/>
+          “不了，正在养生呢。”<br/>
+          “最近嗓子不舒服，抽不了。”<br/>
+          如果对方还继续，可以笑着说“真的不用了”，然后转移话题。
+        </view>
+      </view>
+    </view>
+
+    <!-- 五、健康与生活 -->
+    <view class="section">
+      <view class="section-title">五、健康与生活</view>
+
+      <view class="qa">
+        <view class="q">Q：戒烟后，身体会发生哪些积极变化？</view>
+        <view class="a">
+          20分钟：心率、血压恢复正常。<br/>
+          12小时：血液中一氧化碳水平降至正常。<br/>
+          2-3个月：血液循环改善，肺功能提高30%。<br/>
+          1-9个月：咳嗽、鼻塞、疲劳感减轻，肺部纤毛再生，清洁能力增强。<br/>
+          1年：冠心病风险降至吸烟者的一半。<br/>
+          5年：中风、口腔癌、喉癌等风险减半。<br/>
+          10年：肺癌风险降至吸烟者的一半。<br/>
+          15年：冠心病风险与不吸烟者相同。
+        </view>
+      </view>
+
+      <view class="qa">
+        <view class="q">Q：电子烟可以作为戒烟的辅助工具吗？</view>
+        <view class="a">
+          <text class="highlight">不推荐。</text>
+          虽然可能减少部分有害物，但依然有尼古丁，长期健康风险不明确。<br/>
+          更安全的方法是：彻底摆脱尼古丁依赖，或在医生指导下使用经过验证的尼古丁替代疗法（如戒烟贴、口香糖等）。
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+</view>

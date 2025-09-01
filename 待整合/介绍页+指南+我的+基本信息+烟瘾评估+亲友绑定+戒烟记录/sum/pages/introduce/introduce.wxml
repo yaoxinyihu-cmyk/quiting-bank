@@ -1,0 +1,56 @@
+<swiper class="swiper" current="{{current}}" bindchange="onSwiperChange">
+  <!-- 第一页 -->
+  <swiper-item>
+    <view class="page">
+      <image class="hero-img" src="/assets/images/step1.png" mode="widthFix"></image>
+      <view class="dots">
+        <view class="dot active"></view>
+        <view class="dot"></view>
+        <view class="dot"></view>
+      </view>
+      <view class="title">每日戒烟打卡</view>
+      <view class="desc">
+  <view>独处时坚持签到，</view>
+  <view>自律坚持赢回健康财富</view>
+</view>
+
+      <button class="primary-btn" bindtap="goNext">下一步</button>
+    </view>
+  </swiper-item>
+
+  <!-- 第二页 -->
+  <swiper-item>
+    <view class="page">
+      <image class="hero-img" src="/assets/images/step2.png" mode="widthFix"></image>
+      <view class="dots">
+        <view class="dot"></view>
+        <view class="dot active"></view>
+        <view class="dot"></view>
+      </view>
+      <view class="title">方法指导相伴</view>
+      <view class="desc">
+  <view>每一次 craving 来袭，</view>
+  <view>都有AI个性化策略为你支招</view>
+</view>
+      <button class="primary-btn" bindtap="goNext">下一步</button>
+    </view>
+  </swiper-item>
+
+  <!-- 第三页 -->
+  <swiper-item>
+    <view class="page">
+      <image class="hero-img" src="/assets/images/step3.png" mode="widthFix"></image>
+      <view class="dots">
+        <view class="dot"></view>
+        <view class="dot"></view>
+        <view class="dot active"></view>
+      </view>
+      <view class="title">奖惩双向激励</view>
+      <view class="desc">
+  <view>成功戒烟，奖励全数返还；</view>
+  <view>一旦破戒，红包飞入亲友口袋</view>
+</view>
+      <button class="next-btn" bindtap="startNow">立即体验</button>
+    </view>
+  </swiper-item>
+</swiper>

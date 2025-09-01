@@ -1,0 +1,75 @@
+page {
+  background-color: #ffffff;
+}
+
+.swiper {
+  height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx;
+}
+
+.hero-img {
+  width: 125%;
+  height: 60vh;
+  object-fit: contain;
+}
+
+.dots {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.dot {
+  width: 20rpx;
+  height: 6rpx;
+  background-color: #ddd;
+  border-radius: 3rpx;
+  margin: 0 5rpx;
+}
+
+.dot.active {
+  background-color: #A4B465;
+}
+
+.title {
+  font-size: 55rpx;
+  font-weight: bold;
+  margin-top: 75rpx;
+  color: #333;
+}
+
+.desc {
+  font-size: 40rpx;
+  color: #666;
+  text-align: center;
+  margin-top: 45rpx;
+  white-space: pre-line;
+}
+
+.primary-btn {
+  margin-top: 60rpx;
+  width: 85%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  background-color: #A4B465;
+  color: white;
+  border-radius: 60rpx;
+}
+.next-btn {
+  margin-top: 60rpx;
+  width: 85%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  background-color: #A4B465;
+  color: white;
+  border-radius: 60rpx;
+}
