@@ -1,0 +1,93 @@
+<!-- 顶部导航：左返回、居中标题 -->
+<view style="padding-top: {{statusBarHeight}}px;">
+  <view class="nav-3col">
+    <view class="nav-left back-wrap" bindtap="goBack">
+      <image class="back-ico" src="../../assets/icons/back.png" mode="widthFix"></image>
+      <text class="back-txt">返回</text>
+    </view>
+    <text class="nav-title-center">打卡日历</text>
+    <view class="nav-right"></view>
+  </view>
+</view>
+
+<view class="page-shell">
+
+  <!-- 概览 -->
+  <view class="card overview">
+    <view class="title">戒烟总天数</view>
+    <view class="days-row"><text class="num">{{totalDays}}</text><text class="unit">天</text></view>
+
+    <view class="desc">
+      <text>自戒烟日期 {{startDateCN}}开始</text>
+      <text class="ml8">您已经坚持了很久了，加油！</text>
+    </view>
+
+    <view class="progress"><view class="bar" style="width: {{progress}}%;"></view></view>
+    <text class="prog-text">{{progress}}%</text>
+
+    <!-- 统计三格：数值在上、文字在下 -->
+    <view class="stats">
+      <view class="stat col">
+        <image class="icon" src="../../assets/icons/nosmoke.png"/>
+        <text class="stat-val">{{totalCigs}}支</text>
+        <text class="stat-sub">累计少吸</text>
+      </view>
+      <view class="stat col">
+        <image class="icon" src="../../assets/icons/money.png"/>
+        <text class="stat-val">￥{{savedMoney}}</text>
+        <text class="stat-sub">节省金额</text>
+      </view>
+      <view class="stat col">
+        <image class="icon" src="../../assets/icons/relapse.png"/>
+        <text class="stat-val">{{relapseCount}}次</text>
+        <text class="stat-sub">复吸</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 日历卡 -->
+  <view class="card cal">
+    <view class="cal-head">
+      <view class="left">
+        <image class="cal-ico" src="../../assets/icons/calendar.png"/>
+        <text class="cal-title">日历</text>
+      </view>
+
+      <!-- 紧凑年月 -->
+      <view class="ctrl">
+        <text class="chev" bindtap="prevYear">‹</text>
+        <picker mode="date" fields="year" value="{{pickerYearVal}}" bindchange="onYearPick">
+          <view class="pill">{{currentYear}}年</view>
+        </picker>
+        <text class="chev" bindtap="nextYear">›</text>
+        <text class="gap"></text>
+        <text class="chev" bindtap="prevMonth">‹</text>
+        <picker mode="date" fields="month" value="{{pickerMonthVal}}" bindchange="onMonthPick">
+          <view class="pill">{{currentMonth}}月</view>
+        </picker>
+        <text class="chev" bindtap="nextMonth">›</text>
+      </view>
+    </view>
+
+    <!-- 星期 -->
+    <view class="week">
+      <block wx:for="{{['日','一','二','三','四','五','六']}}" wx:key="*this">
+        <view class="wk">{{item}}</view>
+      </block>
+    </view>
+
+    <!-- 网格 -->
+    <view class="grid">
+      <block wx:for="{{matrix}}" wx:key="row" wx:for-item="row">
+        <block wx:for="{{row}}" wx:key="col" wx:for-item="cell">
+          <view class="cell {{cell.inMonth?'in':''}} {{cell.signed?'ok':''}} {{cell.hasMood?'mark':''}} {{cell.isToday?'today':''}} {{cell.isToday && pulseToday?'pulse':''}}"
+                data-y="{{cell.y}}" data-m="{{cell.m}}" data-d="{{cell.d}}"
+                bindtap="goDetail">
+            <text class="d">{{cell.d}}</text>
+            <view wx:if="{{cell.hasMood}}" class="corner"></view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+</view>

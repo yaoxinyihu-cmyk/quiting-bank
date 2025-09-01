@@ -1,0 +1,74 @@
+page{ background:#F2E8CF; }
+
+/* 顶部导航 */
+.nav-3col{ height:96rpx; display:flex; align-items:center; justify-content:space-between; padding:0 20rpx; }
+.nav-title-center{ flex:1; text-align:center; font-weight:700; font-size:32rpx; }
+.nav-left,.nav-right{ width:160rpx; display:flex; align-items:center; }
+.back-wrap{ gap:8rpx; color:#333; }
+.back-ico{ width:28rpx; height:28rpx; }
+.back-txt{ font-size:28rpx; }
+
+.page-shell{ padding:16rpx 20rpx 24rpx; }
+.card{ background:#fff; border-radius:16rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,.06); padding:20rpx; }
+
+.title{ font-weight:700; }
+.days-row{ display:flex; align-items:baseline; gap:8rpx; margin-top:8rpx; }
+.num{ font-size:56rpx; font-weight:700; }
+.unit{ color:#666; }
+.desc{ color:#666; margin-top:6rpx; display:flex; flex-wrap:wrap; }
+.ml8{ margin-left:8rpx; }
+.progress{ height:10rpx; background:#eee; border-radius:10rpx; margin-top:8rpx; overflow:hidden; }
+.bar{ height:100%; background:#07C160; }
+.prog-text{ font-size:24rpx; color:#666; margin-top:4rpx; }
+
+/* 统计三格：上下排版 */
+.stats{ display:flex; gap:12rpx; margin-top:12rpx; }
+.stat{
+  flex:1; background:#F7F7F7; border-radius:12rpx; padding:12rpx;
+  display:flex; align-items:center; justify-content:center; gap:8rpx;
+}
+.stat.col{ flex-direction:column; }
+.icon{ width:36rpx; height:36rpx; }
+.stat-val{ font-weight:800; font-size:30rpx; }
+.stat-sub{ font-size:24rpx; color:#777; }
+
+/* 日历头：紧凑年月 */
+.cal{ margin-top:14rpx; }
+.cal-head{ display:flex; align-items:center; justify-content:space-between; }
+.left{ display:flex; align-items:center; gap:8rpx; }
+.cal-ico{ width:34rpx; height:34rpx; }
+.cal-title{ font-weight:700; }
+.ctrl{ display:flex; align-items:center; gap:6rpx; }
+.chev{ font-size:36rpx; line-height:1; color:#333; padding:4rpx 6rpx; }
+.pill{
+  padding:6rpx 14rpx; background:#F5F5F5; border-radius:999rpx;
+  font-size:26rpx; color:#333; min-width:90rpx; text-align:center;
+}
+.gap{ width:6rpx; }
+
+/* 星期/网格 */
+.week{ display:grid; grid-template-columns:repeat(7,1fr); gap:8rpx; margin-top:10rpx; color:#777; }
+.wk{ text-align:center; }
+.grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:10rpx; margin-top:8rpx; }
+
+.cell{
+  height:88rpx; border-radius:999rpx; background:#fff;
+  border:2rpx solid #eee; display:flex; align-items:center; justify-content:center;
+  position:relative; color:#ccc;
+}
+.cell.in{ color:#333; }
+.cell.ok{ border-color:#91d5a6; background:#f6ffed; }
+.cell.today{ border-color:#07C160; }
+.cell.mark::after{
+  content:''; position:absolute; top:-6rpx; right:-6rpx;
+  width:14rpx; height:14rpx; background:#ff4d4f; border-radius:4rpx;
+}
+.d{ font-weight:600; }
+
+/* 呼吸动画 */
+.cell.today.pulse{ animation:pulse 1.2s ease-in-out infinite; }
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 0 rgba(7,193,96,.35); }
+  70%{ box-shadow:0 0 0 16rpx rgba(7,193,96,.03); }
+  100%{ box-shadow:0 0 0 0 rgba(7,193,96,0); }
+}

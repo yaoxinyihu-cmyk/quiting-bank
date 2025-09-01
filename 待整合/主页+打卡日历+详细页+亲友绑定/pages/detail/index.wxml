@@ -1,0 +1,32 @@
+<view style="padding-top: {{statusBarHeight}}px;">
+  <view class="nav-3col">
+    <text class="nav-left back" bindtap="goBack">返回</text>
+    <text class="nav-title-center">打卡详情</text>
+    <view class="nav-right"></view>
+  </view>
+</view>
+
+<view class="page-wrap">
+  <view class="card">
+    <view class="row between">
+      <text class="label strong">日期</text>
+      <text class="date">{{dateCN}}</text>
+    </view>
+
+    <view class="row between mt16">
+      <text class="label strong">今日是否打卡（未吸烟）</text>
+      <switch checked="{{signed}}" disabled="{{!isToday}}" color="#07C160" bindchange="onSwitch"/>
+    </view>
+
+    <view class="label mt20 strong">当日心情/备注</view>
+    <textarea class="mood"
+      placeholder="{{ isToday ? '写点今天的心得吧' : '仅可查看，非当天不可编辑' }}"
+      value="{{mood}}"
+      disabled="{{!isToday}}"
+      bindinput="onMoodInput"
+      autoHeight />
+
+    <button class="save" bindtap="onSave" disabled="{{!isToday}}">保存</button>
+    <text class="tip">* 仅“今天”可打卡/写心情；非当天不可补签。</text>
+  </view>
+</view>

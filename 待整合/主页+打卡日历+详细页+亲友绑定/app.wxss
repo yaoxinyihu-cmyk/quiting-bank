@@ -1,0 +1,14 @@
+/* 全局背景 */
+page { background:#F2E8CF; }
+
+/* 自定义顶部三列导航：左/中/右 */
+.nav-3col{
+  height: 88rpx;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 0 24rpx;
+}
+.nav-title-center{
+  font-size: 32rpx; font-weight: 700;
+}
+.nav-left,.nav-right{ width:120rpx; height:1rpx; } /* 占位，保证标题真正居中 */
+.nav-left.back{ width:auto; height:auto; color:#555; }

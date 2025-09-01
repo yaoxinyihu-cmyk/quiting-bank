@@ -1,0 +1,14 @@
+page { background:#F2E8CF; }
+.wrap{ padding:24rpx; }
+.card{ background:#fff; border-radius:16rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,.06); padding:24rpx; }
+.row{ display:flex; gap:16rpx; align-items:center; margin-bottom:16rpx; }
+.avatar{ width:88rpx; height:88rpx; border-radius:50%; }
+.col{ display:flex; flex-direction:column; }
+.name{ font-weight:700; }
+.sub{ color:#888; font-size:24rpx; }
+
+.kv{ display:flex; align-items:center; justify-content:space-between; margin-top:14rpx; }
+.k{ color:#666; }
+.v{ background:#F7F7F7; border-radius:10rpx; padding:10rpx 14rpx; width:260rpx; text-align:right; }
+.save{ margin-top:18rpx; background:#07C160; color:#fff; font-weight:700; }
+.tip{ display:block; margin-top:8rpx; color:#999; font-size:24rpx; }

@@ -1,0 +1,24 @@
+<view style="padding-top: {{statusBarHeight}}px;">
+  <view class="nav-3col">
+    <text class="nav-left back" bindtap="goBack">返回</text>
+    <text class="nav-title-center">留言板</text>
+    <view class="nav-right"></view>
+  </view>
+</view>
+
+<view class="wrap">
+  <scroll-view scroll-y class="list" scroll-top="{{scrollTop}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view class="msg">
+        <image class="avatar" src="{{item.avatar}}"/>
+        <view class="bubble">
+          <view class="header">
+            <text class="name">{{item.name}}</text>
+            <text class="time">{{item.time}}</text>
+          </view>
+          <text class="text">{{item.text}}</text>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

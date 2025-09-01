@@ -1,0 +1,9 @@
+.wrap{ padding:24rpx; }
+.list{ height: calc(100vh - 24rpx - 88rpx - env(safe-area-inset-bottom)); }
+.msg{ display:flex; gap:16rpx; margin-bottom:18rpx; }
+.avatar{ width:64rpx; height:64rpx; border-radius:50%; }
+.bubble{ background:#fff; border-radius:16rpx; padding:16rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,.06); flex:1; }
+.header{ display:flex; align-items:center; justify-content:space-between; }
+.name{ font-weight:700; }
+.time{ color:#999; font-size:24rpx; }
+.text{ margin-top:6rpx; color:#444; line-height:1.7; }

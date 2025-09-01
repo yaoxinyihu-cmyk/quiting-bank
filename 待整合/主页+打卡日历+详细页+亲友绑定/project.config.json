@@ -1,0 +1,14 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "戒烟银行",
+  "description": "打卡日历 Demo",
+  "appid": "tour-appid-here",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram"
+}

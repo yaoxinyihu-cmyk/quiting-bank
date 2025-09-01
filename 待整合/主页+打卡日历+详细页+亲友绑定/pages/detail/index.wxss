@@ -1,0 +1,19 @@
+page{ background:#F2E8CF; }
+.nav-3col{ height:96rpx; display:flex; align-items:center; justify-content:space-between; padding:0 24rpx; }
+.nav-left,.nav-right{ width:120rpx; color:#666; }
+.nav-left.back{ color:#333; }
+.nav-title-center{ flex:1; text-align:center; font-weight:700; font-size:32rpx; }
+
+.page-wrap{ padding:24rpx; display:flex; justify-content:center; }
+.card{ width:100%; max-width:680rpx; background:#fff; border-radius:16rpx; box-shadow:0 8rpx 24rpx rgba(0,0,0,.06); padding:24rpx; }
+.row{ display:flex; align-items:center; }
+.between{ justify-content:space-between; }
+.label{ color:#333; }
+.strong{ font-weight:700; }
+.date{ color:#666; }
+.mt16{ margin-top:16rpx; }
+.mt20{ margin-top:20rpx; }
+.mood{ width:100%; min-height:220rpx; margin-top:12rpx; background:#F7F7F7; border-radius:12rpx; padding:16rpx; box-sizing:border-box; color:#333; }
+.save{ margin-top:20rpx; width:100%; height:88rpx; border-radius:12rpx; background:#07C160; color:#fff; font-weight:700; font-size:32rpx; border:none; display:flex; align-items:center; justify-content:center; }
+.save[disabled]{ background:#CDEFD9; }
+.tip{ display:block; margin-top:12rpx; color:#999; font-size:24rpx; }

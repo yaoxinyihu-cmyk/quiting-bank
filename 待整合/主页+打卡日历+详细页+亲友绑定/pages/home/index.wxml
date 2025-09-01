@@ -1,0 +1,82 @@
+<!-- 顶部导航 -->
+<view style="padding-top: {{statusBarHeight}}px;">
+  <view class="nav-3col">
+    <view class="nav-left"></view>
+    <text class="nav-title-center">戒烟银行</text>
+    <view class="nav-right more"></view>
+  </view>
+</view>
+
+<view class="page-wrap">
+  <view class="cards">
+
+    <!-- 1. 个人卡片（头像 + 标语 + 绑定亲友） -->
+    <view class="card profile-card">
+      <image class="avatar" src="{{user.avatar}}" mode="aspectFill"/>
+      <view class="u-col">
+        <text class="u-name">{{user.name}}</text>
+        <text class="u-sub">这次一定能戒烟成功！</text>
+      </view>
+      <button class="bind-btn bind-btn--green" bindtap="goBind">绑定亲友</button>
+    </view>
+
+    <!-- 2. 戒烟打卡 -->
+    <view class="card feature-card">
+      <view class="section-head">
+        <text class="section-title">戒烟打卡</text>
+      </view>
+
+      <view class="streak-line">
+        <text class="days">{{streakDays}}</text><text class="unit">天</text>
+      </view>
+
+      <button class="big-fab" bindtap="oneTapSign">一键打卡</button>
+
+      <view class="tools">
+        <button class="ghost" bindtap="openCalendar">打卡日历</button>
+      </view>
+    </view>
+
+    <!-- 3. 累计攒钱 -->
+    <view class="card money-card">
+      <view class="section-head">
+        <text class="section-title">累计攒钱</text>
+      </view>
+
+      <view class="seg-body">
+        <image class="bag" src="/assets/icons/money.png"/>
+        <view class="chips">
+          <view class="chip-row"><text>今日攒钱：</text><text>{{todaySave}} 元</text></view>
+          <view class="chip-row"><text>总计攒钱：</text><text>{{sumSave}} 元</text></view>
+          <view class="chip-row"><text>累计少吸：</text><text>{{sumCigs}} 支</text></view>
+        </view>
+      </view>
+
+      <text class="seg-foot">最近连续从：{{streakStartCN}}（遇断签自动重置）</text>
+    </view>
+
+    <!-- 4. 留言板 -->
+    <view class="card msg-card">
+      <view class="section-head">
+        <text class="section-title">留言板</text>
+        <text class="section-more" bindtap="openAllMsgs">全部 ></text>
+      </view>
+
+      <view class="msg-preview">
+        <block wx:for="{{msgsPreview}}" wx:key="id">
+          <view class="msg">
+            <image class="b-avatar" src="{{item.avatar}}"/>
+            <view class="b-bubble">
+              <view class="b-header">
+                <text class="b-name">{{item.name}}</text>
+                <text class="b-time">{{item.time}}</text>
+              </view>
+              <text class="b-text">{{item.text}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+  </view>
+</view>
