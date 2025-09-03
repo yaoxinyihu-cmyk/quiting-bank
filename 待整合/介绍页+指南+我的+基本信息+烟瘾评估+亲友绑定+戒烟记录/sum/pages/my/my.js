@@ -34,5 +34,8 @@ Page({
   },
   goFunds() {
     wx.navigateTo({ url: '/pages/funds/funds' });
+  },
+  goAiguide() {
+    wx.navigateTo({ url: '/pages/ai-guide/ai-guide' });
   }
 });

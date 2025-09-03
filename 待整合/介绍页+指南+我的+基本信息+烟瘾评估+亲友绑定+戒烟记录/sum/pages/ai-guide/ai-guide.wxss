@@ -1,0 +1,29 @@
+/* ... (保留上一轮的全部 WXSS 代码) ... */
+
+/* 确保聊天区域可滚动 */
+.chat-area {
+    flex: 1;
+    padding: 30rpx;
+    /* 确保这里有足够的高度来触发滚动 */
+    height: calc(100vh - 200rpx); /* 假设头部和底部总高200rpx */
+    box-sizing: border-box;
+  }
+  
+  /* 消息气泡样式（如果需要微调） */
+  .message {
+    margin-bottom: 20rpx;
+  }
+  .message-content {
+    padding: 20rpx;
+    border-radius: 20rpx;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  .left-message .message-content {
+    background-color: #fff;
+    margin-left: 20rpx;
+  }
+  .right-message .message-content {
+    background-color: #90ee90;
+    margin-right: 20rpx;
+  }

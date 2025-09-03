@@ -5,7 +5,7 @@ Page({
   data:{
     statusBarHeight:0,
     user:{ name:'刘军', avatar:'/assets/avatars/a1.png' },
-    streakDays:5, streakStartCN:'2025年8月28日',
+    streakDays:0, streakStartCN:'2025年8月28日',
     todaySave:20, sumSave:100, sumCigs:100,
     msgsPreview:[
       {id:1, name:'橙子', avatar:'/assets/avatars/a1.png', time:'10:17', text:'坚持，加油！'},

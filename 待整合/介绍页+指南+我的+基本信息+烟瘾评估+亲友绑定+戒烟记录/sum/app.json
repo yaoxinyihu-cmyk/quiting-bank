@@ -10,7 +10,9 @@
     "pages/motivation/motivation",
     "pages/friend-bind/friend-bind",
     "pages/quit-record/quit-record",
-    "pages/funds/funds"
+    "pages/funds/funds",
+    "pages/ai-guide/ai-guide"
+
   ],
   "window": {
     "navigationBarTextStyle": "black",
