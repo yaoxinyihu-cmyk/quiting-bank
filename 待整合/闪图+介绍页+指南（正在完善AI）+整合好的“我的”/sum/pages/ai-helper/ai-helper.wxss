@@ -1,0 +1,58 @@
+.ai-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  .chat-box {
+    flex: 1;
+    padding: 20rpx;
+    box-sizing: border-box;
+  }
+  
+  .msg-item {
+    max-width: 80%;
+    padding: 16rpx 20rpx;
+    margin-bottom: 20rpx;
+    border-radius: 12rpx;
+    word-wrap: break-word;
+  }
+  
+  .msg-item.user {
+    background-color: #007aff;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .msg-item.bot {
+    background-color: #ffffff;
+    color: #333;
+    align-self: flex-start;
+    border: 1px solid #ddd;
+  }
+  
+  .input-bar {
+    display: flex;
+    padding: 12rpx;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+  }
+  
+  .chat-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 8rpx;
+    padding: 0 16rpx;
+    font-size: 28rpx;
+  }
+  
+  .send-btn {
+    margin-left: 12rpx;
+    background-color: #007aff;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 28rpx;
+    padding: 0 20rpx;
+  }
+  

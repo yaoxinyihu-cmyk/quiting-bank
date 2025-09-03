@@ -1,0 +1,51 @@
+<view class="page">
+
+<!-- 日期标题 -->
+<text class="date-title">我决心开始完全戒烟的日期</text>
+
+<!-- 日期输入框 -->
+<view class="date-input">
+  <picker mode="date" value="{{date}}" bindchange="onDateChange">
+    <view class="input-text">{{date ? date : '请选择日期'}}</view>
+  </picker>
+  <image src="/assets/images/calendar-icon-small.png" class="calendar-icon"></image>
+</view>
+
+<!-- 戒烟装饰图 -->
+<image src="/assets/images/quit-icon.png" class="smoke-decor"></image>
+
+<!-- 口号标题 -->
+<text class="slogan-title">我的戒烟口号</text>
+
+<!-- 口号输入框 -->
+<view class="slogan-input">
+  <input placeholder="这次一定戒烟成功!" bindinput="onSloganInput" value="{{slogan}}" />
+</view>
+
+<!-- 留言板入口 -->
+<view class="message-entry" bindtap="toggleMessageBoard">
+  <image src="/assets/images/message-icon.png" class="message-icon"></image>
+  <text class="message-text">留言板</text>
+</view>
+
+<!-- 留言板弹窗 -->
+<view wx:if="{{showMessageBoard}}" class="popup-mask" bindtap="toggleMessageBoard">
+  <view class="popup" catchtap="stopMask">
+    <scroll-view scroll-y class="popup-scroll">
+      <block wx:for="{{messages}}" wx:key="index">
+        <view class="msg-card">
+          <image class="avatar" src="{{item.avatar}}"></image>
+          <view class="msg-body">
+            <view class="msg-header">
+              <text class="name">{{item.name}}</text>
+              <text class="time">{{item.time}}</text>
+            </view>
+            <text class="text">{{item.text}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+
+</view>
