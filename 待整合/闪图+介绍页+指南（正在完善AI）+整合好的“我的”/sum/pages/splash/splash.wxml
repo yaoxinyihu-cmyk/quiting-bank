@@ -1,0 +1,7 @@
+<view class="container">
+  <image
+    class="splash-image"
+    src="/assets/images/splash.png"
+    mode="aspectFill"
+  ></image>
+</view>
