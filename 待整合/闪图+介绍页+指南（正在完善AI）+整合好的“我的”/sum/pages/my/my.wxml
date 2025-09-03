@@ -47,11 +47,6 @@
     <text>金额存取</text>
     <text class="arrow">›</text>
   </view>
-  <view class="menu-item" bindtap="goAiguide">
-    <image src="/assets/icons/record.png" class="menu-icon"></image>
-    <text>AI助手</text>
-    <text class="arrow">›</text>
-  </view>
 </view>
 
 <!-- 底部提示 -->

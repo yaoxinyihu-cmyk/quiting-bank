@@ -17,45 +17,72 @@ Page({
       const text = this.data.inputValue.trim();
       if (!text) return;
   
-      const newMsg = {
+      // 1. 在界面上立即显示用户发送的消息
+      const newUserMessage = {
         id: Date.now(),
         from: 'user',
         text
       };
   
       this.setData({
-        messages: [...this.data.messages, newMsg],
+        messages: [...this.data.messages, newUserMessage],
         inputValue: '',
-        scrollId: `msg${newMsg.id}`
+        scrollId: `msg${newUserMessage.id}`
       });
   
-      // 模拟AI响应
-      setTimeout(() => {
-        const reply = this.getAIReply(text);
-        const botMsg = {
-          id: Date.now() + 1,
-          from: 'bot',
-          text: reply
-        };
-        this.setData({
-          messages: [...this.data.messages, botMsg],
-          scrollId: `msg${botMsg.id}`
-        });
-      }, 500);
+      // 2. 调用 Coze API
+      wx.request({
+        url: 'https://api.coze.cn/v3/chat',
+        method: 'POST',
+        header: {
+          'Content-Type': 'application/json',
+          // 【重要】将 'YOUR_COZE_API_TOKEN' 替换为你自己的 API token
+          'Authorization': 'Bearer cztei_hNG01hknrbB6YPP05dPIwhDsAVOQkAE9coemgL7CTgmb7TFMFzmnbYa18ktVeChzs'
+        },
+        data: {
+          // 【重要】将 'YOUR_BOT_ID' 替换为你的 Coze Bot ID
+          bot_id: 'ai戒烟助手小猪',
+          user_id: `smoking-quiter`, // 使用一个唯一的 ID
+          query: text
+        },
+        success: (res) => {
+          console.log('Coze API 响应：', res.data);
+          const responseData = res.data;
+  
+          // 3. 处理 API 响应并更新界面
+          if (responseData && responseData.messages && responseData.messages.length > 0) {
+            // 寻找 type 为 'answer' 的消息，通常这是 AI 的回复
+            const aiReply = responseData.messages.find(msg => msg.type === 'answer');
+            if (aiReply) {
+              const botMessage = {
+                id: Date.now() + 1,
+                from: 'bot',
+                text: aiReply.content
+              };
+              this.setData({
+                messages: [...this.data.messages, botMessage],
+                scrollId: `msg${botMessage.id}`
+              });
+            }
+          } else {
+            // 如果没有有效的回复
+            this.showError('未能获取到AI回复。');
+          }
+        },
+        fail: (err) => {
+          console.error('API请求失败：', err);
+          this.showError('网络连接失败，请检查网络和域名配置。');
+        }
+      });
     },
   
-    getAIReply(userText) {
-      // 简单关键词匹配（可接入云函数或API做智能回答）
-      if (userText.includes('难受') || userText.includes('忍不住')) {
-        return '当你感觉忍不住时，可以试试4D方法：拖延、深呼吸、喝水、做别的事。';
-      }
-      if (userText.includes('体重')) {
-        return '戒烟后体重增加是正常的，你可以通过多喝水、吃健康零食和适量运动来控制。';
-      }
-      if (userText.includes('你好')) {
-        return '你好，很高兴和你聊天。你是刚开始戒烟还是已经坚持一段时间了？';
-      }
-      return '坚持下去，你已经在变得更健康的路上了！';
+    // 辅助函数，用于显示错误提示
+    showError(message) {
+      wx.showToast({
+        title: message,
+        icon: 'none',
+        duration: 2000
+      });
     }
   });
   
