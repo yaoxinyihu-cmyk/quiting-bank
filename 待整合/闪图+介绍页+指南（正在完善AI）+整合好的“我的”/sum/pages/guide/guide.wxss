@@ -1,60 +1,79 @@
-/* pages/guide/guide.wxss */
-.container {
+.guide-page {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    background-color: #fdfaf2;
-    padding-top: constant(safe-area-inset-top); 
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: 0;
+    height: 100vh;
+    background-color: #f5f2e8;
   }
   
+  .top-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    padding: 20rpx 30rpx;
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .nav-item.active {
+    font-weight: bold;
+    border-bottom: 4rpx solid #007AFF;
+    color: #007AFF;
+  }
+  
+  /* 内容区左右留白 */
+  .content-area {
+    flex: 1;
+    padding: 0 30rpx; /* 上下0，左右30rpx */
+    box-sizing: border-box;
+    line-height: 1.8; /* 提升阅读体验 */
+    background-color: #f5f2e8;
+  }
+  
+  /* banner 图片也保持左右留白（遵循外层 padding） */
   .banner {
     width: 100%;
+    border-radius: 12rpx;
+    margin-bottom: 20rpx;
+    display: block;
   }
   
-  .title {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin: 15px 10px;
-    color: #333;
-  }
-  
-  .scroll-content {
-    flex: 1;
-    padding: 0 15px 15px;
-    box-sizing: border-box;
-  }
-  
+  /* 区块统一间距 */
   .section {
-    margin-bottom: 20px;
+    margin-bottom: 40rpx;
   }
   
+  /* 标题样式 */
   .section-title {
-    font-size: 16px;
+    font-size: 34rpx;
     font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
+    margin-bottom: 20rpx;
+    text-align: center;
   }
   
-  .qa {
-    margin-bottom: 15px;
+  .section-subtitle {
+    font-size: 30rpx;
+    font-weight: bold;
+    margin-bottom: 20rpx;
   }
   
+  /* Q&A 样式 */
   .q {
     font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    margin-top: 10rpx;
   }
   
   .a {
-    color: #555;
-    line-height: 1.6;
+    margin-top: 5rpx;
+    margin-bottom: 20rpx;
+    line-height: 1.8;
   }
   
-  .highlight {
-    color: #d9534f;
+  /* 加粗通用 */
+  .bold {
     font-weight: bold;
   }
   

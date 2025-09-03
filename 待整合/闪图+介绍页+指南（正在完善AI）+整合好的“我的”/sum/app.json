@@ -4,6 +4,7 @@
     "pages/index/index",
     "pages/introduce/introduce",
     "pages/guide/guide",
+    "pages/ai-helper/ai-helper",
     "pages/my/my",
     "pages/info/info",
     "pages/addiction-test/addiction-test",
