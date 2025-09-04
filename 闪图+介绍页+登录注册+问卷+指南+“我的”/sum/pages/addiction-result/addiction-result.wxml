@@ -1,0 +1,41 @@
+<!-- 评估结果页 -->
+<view class="page">
+
+<!-- 顶部背景 -->
+<view class="header-bg">
+  <text class="page-title">烟草依赖程度测试量表</text>
+</view>
+
+<!-- 白色容器（logo + 内容卡片） -->
+<view class="card">
+  <image src="../../assets/images/logo.png" class="logo" mode="aspectFit"></image>
+
+  <!-- 结果卡片 -->
+  <view class="result-card">
+    <text class="lead">您的自我评估结果为</text>
+
+    <!-- 饼图 + 结果文字并排 -->
+    <view class="result-row">
+      <image src="../../assets/images/pie_placeholder.png" class="pie" mode="aspectFit"></image>
+      <view class="result-text">
+        <text class="result-title">{{ resultLabel }}</text>
+        <view class="share-btn" bindtap="onShare">分享测试结果</view>
+      </view>
+    </view>
+
+    <!-- 建议区域 -->
+<view class="advice">
+  <image src="../../assets/images/pig.png" class="avatar" mode="aspectFit"></image>
+
+  <!-- 独立结果文字卡片 -->
+  <view class="advice-box">
+    <scroll-view scroll-y="true" style="max-height:180px;" class="advice-scroll">
+      <text>{{ adviceText }}</text>
+    </scroll-view>
+  </view>
+</view>
+
+    <button class="ack-btn" bindtap="onAcknowledge">我知道了</button>
+  </view>
+</view>
+</view>

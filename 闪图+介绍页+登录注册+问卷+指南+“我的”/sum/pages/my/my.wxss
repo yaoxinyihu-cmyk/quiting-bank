@@ -1,0 +1,103 @@
+.my-container {
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 用户信息区 */
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background: #fff;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 8rpx solid #797979;
+}
+
+.user-text {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.name {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.motto {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.info-btn {
+  background-color: #CBE956;
+  color: #000;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid #000;
+}
+
+/* 成就卡片 */
+.achievement-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 关键：让文字和奖牌垂直居中 */
+  background: #fff7e6;
+  margin: 40rpx;
+  padding: 20rpx;
+  border-radius: 12rpx;
+  border: 2rpx solid #ccc;
+}
+
+/* 可选：给文字部分一个单独类，保持两行高度居中 */
+.achievement-text {
+  display: flex;
+  flex-direction: column;    /* 文字保持上下排列 */
+  justify-content: center;   /* 垂直居中 */
+}
+
+
+.medal {
+  width: 125rpx;
+  height: 125rpx;
+}
+
+/* 菜单区 */
+.menu {
+  background: #fff;
+  margin-top: 40rpx;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.arrow {
+  margin-left: auto;
+  color: #ccc;
+}
+
+/* 底部提示 */
+.bottom-tip {
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+  margin: 40rpx 0;
+}

@@ -1,0 +1,33 @@
+<view class="ai-page">
+  <scroll-view class="chat-box" scroll-y scroll-with-animation scroll-into-view="{{scrollId}}">
+    <view wx:for="{{messages}}" wx:key="id" id="msg{{item.id}}" class="msg-item {{item.from}}">
+      <text class="msg-text">{{item.text}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="input-bar">
+    <input
+      class="chat-input"
+      placeholder="和AI聊聊你的戒烟情况..."
+      value="{{inputValue}}"
+      bindinput="onInput"
+      confirm-type="send"
+      bindconfirm="sendMessage"
+    />
+    <button class="send-btn" bindtap="sendMessage">发送</button>
+  </view>
+</view>
+
+  <!-- 底部输入区 -->
+  <view class="input-bar">
+    <input
+      class="chat-input"
+      placeholder="和AI聊聊你的戒烟情况..."
+      value="{{inputValue}}"
+      bindinput="onInput"
+      confirm-type="send"
+      bindconfirm="sendMessage"
+    />
+    <button class="send-btn" bindtap="sendMessage">发送</button>
+  </view>
+

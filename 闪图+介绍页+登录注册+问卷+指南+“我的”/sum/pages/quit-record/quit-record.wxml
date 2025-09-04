@@ -1,0 +1,42 @@
+<view class="container">
+  <!-- 上面两个卡片 -->
+  <view class="cards-wrapper">
+    <!-- 次数动态显示卡片 -->
+    <view class="section">
+      <view class="section-title">
+        第{{relapseTimes + 1}}次戒烟
+      </view>
+      <view class="card">
+        <view class="card-left">
+          <canvas id="progressCanvas" type="2d" class="circle-canvas"></canvas>
+        </view>
+        <view class="card-right common-info">
+          <view>已戒烟 <text class="highlight">{{quitDays}}</text> 天</view>
+          <view>累计少吸 <text class="highlight">{{totalCigarettes}}</text> 支</view>
+        </view>
+        <image src="/assets/images/quit-icon.png" class="bg-icon"></image>
+      </view>
+    </view>
+
+    <!-- 复吸记录卡片 -->
+    <view class="section">
+      <view class="section-title">复吸记录</view>
+      <view class="card">
+        <view class="card-left">
+          <image src="/assets/images/calendar-icon.png" class="icon-img"></image>
+        </view>
+        <view class="card-right common-info">
+          <view>{{relapseDate}}</view>
+          <view>复吸 {{relapseTimes}} 次</view>
+        </view>
+        <image src="/assets/images/quit-icon.png" class="bg-icon"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部提示语 -->
+  <view class="note-container">
+    <view class="note">戒烟虽难，但每一次重新尝试都离成功更近一步，</view>
+    <view class="note">所以，这次请为自己再坚持一次！</view>
+  </view>
+</view>

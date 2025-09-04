@@ -1,0 +1,107 @@
+page {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* 徽章 */
+.badge-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -50px; /* 往下移动一些，避免被遮挡 */
+  position: relative;
+  z-index: 2; /* 确保徽章在弧形上方 */
+}
+
+.badge {
+  width: 250px;   /* 放大 */
+  height: 160px; /* 放大 */
+}
+
+
+/* 表单 */
+.form {
+  padding: 25px 20px;
+}
+.form-label {
+  color: #333;
+  margin: 15px 0 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.input-line {
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon-arrow {
+  width: 16px;
+  height: 16px;
+}
+
+/* 按钮 */
+.next-btn {
+  background-color: #a5b74a;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  margin: 40px 20px;
+  height: 44px;
+  line-height: 44px;
+}
+.header-wrap {
+  width: 100%;
+  background-color: #a5b74a;
+  position: relative;
+}
+.status-bar {
+  height: 20px;
+}
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 44px;
+}
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.more-icon {
+  width: 20px;
+  height: 20px;
+}
+.sub-header {
+  padding: 10px 20px 50px;
+}
+.subtitle-1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.subtitle-2 {
+  font-size: 14px;
+  color: #222;
+  margin-top: 6px;
+  display: block;
+  line-height: 1.4;
+}
+.arc-shape {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  height: 60px;
+}

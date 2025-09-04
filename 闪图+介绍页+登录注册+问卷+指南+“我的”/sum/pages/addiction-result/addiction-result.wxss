@@ -1,0 +1,128 @@
+.page { 
+  background:#f6f6f6; 
+  min-height:100vh; 
+}
+
+/* 顶部绿色背景 */
+.header-bg {
+  background: #A4B465;
+  padding: 30px 20px 100px; /* 拉长背景，留空间给白卡片覆盖 */
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  text-align: center;
+  position: relative;
+}
+.page-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* 白色容器（含logo和内容） */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  margin: -70px 16px 16px; /* 上移覆盖绿色背景 */
+  padding: 20px 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 0px;
+  display: block;
+}
+
+/* 结果卡片 */
+.result-card{ 
+  padding:18px; 
+  background:#fff; 
+  border-radius:12px; 
+  text-align:center; 
+  border: 1px solid #f0f0f0;
+}
+.lead{ 
+  display:block; 
+  margin-top:6px; 
+  color:#666; 
+}
+
+.result-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:15px;
+}
+
+.pie{ 
+  width:120px; 
+  height:120px; 
+  margin-right:20px;
+}
+
+.result-text{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.result-title{ 
+  font-size:24px; 
+  font-weight:700; 
+  margin-bottom:10px; 
+  color:#3b4a28; 
+}
+
+.share-btn{ 
+  background:#d9534f; 
+  color:#fff; 
+  padding:6px 10px; 
+  border-radius:6px; 
+}
+
+/* 建议区域整体布局：横排，头像在左 */
+.advice { 
+  margin-top:18px; 
+  display:flex; 
+  align-items:flex-start; 
+}
+
+/* pig头像 */
+.avatar {
+  width:48px; 
+  height:48px; 
+  margin-right:10px;
+}
+
+/* 建议文本卡片 */
+.advice-box {
+  flex:1;
+  background:#fff;
+  border-radius:10px;
+  padding:12px;
+  color:#333;
+  border:1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 阴影 */
+}
+
+/* scroll 区域保持填充 */
+.advice-scroll {
+  flex:1;
+}
+
+
+/* 确认按钮 */
+.ack-btn{
+  margin-top:16px;
+  width:90%;
+  height:44px;
+  background:#9daf62;
+  color:white;
+  border-radius:22px;
+  border:none;
+}

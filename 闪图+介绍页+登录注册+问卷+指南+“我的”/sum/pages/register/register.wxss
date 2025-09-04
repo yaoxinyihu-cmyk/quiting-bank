@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: env(safe-area-inset-top);
+  background-color: #fff;
+}
+
+/* 背景图片占上半部分并左右铺满 */
+.background {
+  width: 100%;
+  height: 50vh; /* 占屏幕一半高度 */
+}
+
+/* 标题与副标题样式 */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+/* 输入框样式 */
+.input {
+  width: 80%;
+  height: 80rpx;
+  border-radius: 20rpx;
+  margin: 10rpx 0;
+  padding: 0 20rpx;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* 注册按钮样式 */
+.register-button {
+  width: 80%;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 18px;
+  background-color: #fbc02d;
+  color: #fff;
+  margin-top: 20rpx;
+}

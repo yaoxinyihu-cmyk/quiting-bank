@@ -1,0 +1,73 @@
+page {
+  background-color: #F5ECD5; /* 背景米黄色 */
+}
+
+.container {
+  padding: 40rpx;
+  position: relative;
+}
+
+/* 右上角扫码按钮 */
+.scan-icon {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+
+/* 二维码卡片 */
+.qrcode-card {
+  background-color: #ffffff;
+  border-radius: 90rpx;
+  padding: 100rpx 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80rpx;
+}
+
+.avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 30rpx;
+  border-radius: 50%;
+  border: 5rpx solid #CEE66E; /* 绿色边框 */
+}
+
+.qrcode-img {
+  width: 375rpx;
+  height: 375rpx;
+}
+
+/* 扫描二维码文字提示（替换按钮样式） */
+.bind-tip {
+  margin: 70rpx auto;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 30rpx;
+  border: 2rpx solid #797979;
+  line-height: 88rpx;
+  width: 70%;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+/* 提示区域 */
+.tip-section {
+  text-align: center;
+  margin-top: 30rpx;
+}
+
+.tip-title {
+  font-weight: bold;
+  color: #666;
+  font-size: 35rpx;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.tip-text {
+  font-size: 30rpx;
+  color: #959595;
+}

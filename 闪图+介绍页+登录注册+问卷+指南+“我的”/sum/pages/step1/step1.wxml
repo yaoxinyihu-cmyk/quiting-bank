@@ -1,0 +1,60 @@
+<view class="header-wrap">
+
+
+  <view class="sub-header">
+    <text class="subtitle-1">资料填写</text>
+    <text class="subtitle-2">
+      请您如实填写以下资料，以便我们更精准地掌握您的戒烟情况
+    </text>
+  </view>
+
+  <!-- SVG 弧形 -->
+  <svg class="arc-shape" viewBox="0 0 750 80" preserveAspectRatio="none">
+    <path d="M0,0 Q375,160 750,0 L750,80 L0,80 Z" fill="#a5b74a"></path>
+  </svg>
+</view>
+
+
+<view class="badge-container">
+  <image class="badge" src="/assets/images/logo.png" mode="aspectFit"></image>
+</view>
+
+
+<view class="form">
+  <text class="form-label">昵称：</text>
+  <input class="input-line" placeholder="请输入您的昵称" bindinput="onNicknameInput" value="{{nickname}}" />
+
+  <text class="form-label">性别：</text>
+  <picker mode="selector" range="{{genders}}" bindchange="onGenderChange">
+    <view class="input-line">
+      <text>{{gender || '请选择性别'}}</text>
+      <image class="icon-arrow" src="/assets/images/arrow-down.png"></image>
+    </view>
+  </picker>
+
+  <text class="form-label">出生日期：</text>
+  <picker mode="date" bindchange="onDateChange">
+    <view class="input-line">
+      <text>{{birthday || '请选择日期'}}</text>
+      <image class="icon-arrow" src="/assets/images/calendar.png"></image>
+    </view>
+  </picker>
+
+  <text class="form-label">学历：</text>
+  <picker mode="selector" range="{{educations}}" bindchange="onEduChange">
+    <view class="input-line">
+      <text>{{education || '请选择您的学历'}}</text>
+      <image class="icon-arrow" src="/assets/images/arrow-down.png"></image>
+    </view>
+  </picker>
+
+  <text class="form-label">烟龄：</text>
+  <picker mode="selector" range="{{smokeAges}}" bindchange="onSmokeAgeChange">
+    <view class="input-line">
+      <text>{{smokeAge || '请选择您的烟龄'}}</text>
+      <image class="icon-arrow" src="/assets/images/arrow-down.png"></image>
+    </view>
+  </picker>
+</view>
+
+<button class="next-btn" bindtap="nextStep">下一步</button>

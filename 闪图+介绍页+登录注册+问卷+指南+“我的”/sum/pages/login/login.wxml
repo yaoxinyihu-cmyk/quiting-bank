@@ -1,0 +1,16 @@
+<view class="container">
+  <!-- 上半部分背景图 -->
+  <image class="background" src="/assets/images/login_bg.png" mode="aspectFill"></image>
+
+  <!-- 标题与副标题 -->
+  <view class="title">Quiting Bank</view>
+  <view class="subtitle">欢迎使用戒烟银行，请登录您的账户</view>
+  
+  <!-- 输入框 -->
+  <input value="{{username}}" bindinput="inputUsername" class="input" type="text" placeholder="用户名" />
+  <input value="{{password}}" bindinput="inputPassword" class="input" type="password" placeholder="密码" />
+  
+  <!-- 按钮 -->
+  <button class="login-button" bindtap="goToLogin" >登录</button>
+  <button class="register-button" bindtap="goToRegister">注册</button>
+</view>
