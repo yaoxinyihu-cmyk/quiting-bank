@@ -1,0 +1,70 @@
+page{ background:#F2E8CF; }
+
+/* 顶部导航 */
+.nav-3col{ height:96rpx; display:flex; align-items:center; justify-content:space-between; padding:0 20rpx; }
+.nav-title-center{ flex:1; text-align:center; font-weight:800; font-size:32rpx; }
+.nav-left,.nav-right{ width:160rpx; }
+
+/* 页面与卡片整体 */
+.page-wrap{ padding:24rpx; }
+.cards{ display:flex; flex-direction:column; gap:20rpx; }
+.card{
+  background:#fff; border-radius:20rpx; box-shadow:0 10rpx 28rpx rgba(0,0,0,.06);
+  padding:28rpx; position:relative;
+}
+
+/* 统一的分段标题（黑体，无蓝底） */
+.section-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:12rpx; }
+.section-title{ font-size:30rpx; font-weight:800; color:#222; }
+.section-more{ color:#666; }
+
+/* 个人卡片 */
+.profile-card{ display:flex; align-items:center; gap:18rpx; min-height:150rpx; }
+.avatar{ width:88rpx; height:88rpx; border-radius:50%; background:#eee; }
+.u-col{ flex:1; display:flex; flex-direction:column; }
+.u-name{ font-size:32rpx; font-weight:800; }
+.u-sub{ font-size:24rpx; color:#888; margin-top:4rpx; }
+
+/* 绑定亲友按钮（同一键打卡绿，但更小） */
+.bind-btn{
+  border:none; outline:0; height:56rpx; line-height:56rpx; padding:0 20rpx;
+  border-radius:999rpx; font-weight:700; font-size:26rpx;
+}
+.bind-btn--green{ background:#07C160; color:#fff; }
+
+/* 戒烟打卡卡片 */
+.feature-card{ min-height:220rpx; }
+.streak-line{ margin-top:2rpx; }
+.days{ font-size:64rpx; font-weight:800; }
+.unit{ font-size:28rpx; color:#666; margin-left:8rpx; }
+.big-fab{
+  margin-top:16rpx; width:100%; height:120rpx; border-radius:1000rpx;
+  background:#07C160; color:#fff; font-weight:800; font-size:34rpx;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 18rpx 32rpx rgba(7,193,96,.28);
+}
+.tools{ margin-top:12rpx; display:flex; justify-content:flex-end; }
+.ghost{
+  height:64rpx; line-height:64rpx; padding:0 22rpx;
+  border-radius:999rpx; border:2rpx solid #ddd; color:#333; background:#fff;
+}
+
+/* 攒钱卡 */
+.seg-body{ display:flex; gap:18rpx; margin-top:4rpx; }
+.bag{ width:96rpx; height:96rpx; margin-top:6rpx; }
+.chips{ flex:1; display:flex; flex-direction:column; gap:14rpx; }
+.chip-row{
+  display:flex; align-items:center; justify-content:space-between;
+  background:#F7F7F7; padding:16rpx 18rpx; border-radius:14rpx; font-size:28rpx;
+}
+.seg-foot{ margin-top:12rpx; color:#999; font-size:24rpx; }
+
+/* 留言卡 */
+.msg-preview{ margin-top:6rpx; }
+.msg{ display:flex; gap:14rpx; margin-bottom:14rpx; }
+.b-avatar{ width:64rpx; height:64rpx; border-radius:50%; background:#eee; }
+.b-bubble{ background:#F7F7F7; border-radius:14rpx; padding:14rpx 16rpx; flex:1; }
+.b-header{ display:flex; align-items:center; justify-content:space-between; }
+.b-name{ font-weight:700; font-size:28rpx; }
+.b-time{ color:#999; font-size:22rpx; }
+.b-text{ margin-top:6rpx; color:#444; line-height:1.6; }
