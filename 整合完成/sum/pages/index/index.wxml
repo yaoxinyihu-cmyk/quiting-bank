@@ -15,7 +15,7 @@
       <image class="avatar" src="{{user.avatar}}" mode="aspectFill"/>
       <view class="u-col">
         <text class="u-name">{{user.name}}</text>
-        <text class="u-sub">这次一定能戒烟成功！</text>
+        <text class="u-sub">{{user.slogan}}</text>
       </view>
       <button class="bind-btn bind-btn--green" bindtap="goBind">绑定亲友</button>
     </view>

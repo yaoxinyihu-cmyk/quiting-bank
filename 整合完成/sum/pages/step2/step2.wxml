@@ -1,5 +1,4 @@
 <view class="header-wrap">
-
   <view class="sub-header">
     <text class="subtitle-1">资料填写</text>
     <text class="subtitle-2">
@@ -21,7 +20,7 @@
   <text class="form-label">平均每天吸多少支烟?</text>
   <picker mode="selector" range="{{smokeCounts}}" bindchange="onSmokeCountChange">
     <view class="input-line">
-      <text>{{smokeCount || '请选择每天吸烟数'}}</text>
+      <text>{{smokeCount ? smokeCount + '支' : '请选择每天吸烟数'}}</text>
       <image class="icon-arrow" src="/assets/images/arrow-down.png"></image>
     </view>
   </picker>
@@ -29,7 +28,13 @@
   <text class="form-label">输入您常购买的卷烟价格是</text>
   <view class="input-line">
     <input placeholder="请输入价格" type="number" bindinput="onPriceInput" value="{{price}}" />
-    <text>元</text>
+    <text>元/包</text>
+  </view>
+
+  <text class="form-label">每包烟有多少支?</text>
+  <view class="input-line">
+    <input placeholder="通常为20支" type="number" bindinput="onCigsPerPackInput" value="{{cigsPerPack}}" />
+    <text>支/包</text>
   </view>
 
   <text class="form-label">您是否有服用戒烟药物</text>

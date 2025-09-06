@@ -22,7 +22,7 @@ Page({
   
   finish() {
     const app = getApp();
-    const currentUser = app.globalData.currentUser;
+    const currentUser = AV.User.current();
     
     // 检查用户是否登录
     if (!currentUser) {
@@ -35,7 +35,7 @@ Page({
       // 跳转到登录页面
       setTimeout(() => {
         wx.redirectTo({
-          url: '/pages/login/login', // 请根据您的实际登录页面路径修改
+          url: '/pages/login/login',
         });
       }, 2000);
       return;
@@ -55,35 +55,38 @@ Page({
       ...app.globalData.tempProfile, // 包含step1和step2的数据
       slogan: this.data.slogan,
       startDate: this.data.startDate ? new Date(this.data.startDate) : null,
-      endDate: this.data.endDate ? new Date(this.data.endDate) : null,
-      user: currentUser // 关联当前用户
+      endDate: this.data.endDate ? new Date(this.data.endDate) : null
     };
     
-    // 创建一个新的Profile对象:cite[1]:cite[5]
+    // 创建一个新的Profile对象
     const Profile = AV.Object.extend('Profile');
     const profile = new Profile();
     
-    // 设置Profile的各个字段:cite[1]
+    // 设置Profile的各个字段
     Object.keys(profileData).forEach(key => {
       if (profileData[key] !== null && profileData[key] !== undefined) {
         profile.set(key, profileData[key]);
       }
     });
     
-    // 设置一个指向当前用户的Pointer:cite[1]
+    // 设置一个指向当前用户的Pointer
     profile.set('user', currentUser);
     
-    // 保存到LeanCloud:cite[1]:cite[5]
+    // 保存到LeanCloud
     profile.save().then(() => {
         console.log('问卷数据保存成功');
+        
+        // 清空临时数据
+        app.globalData.tempProfile = {};
+        
+        // 更新全局用户信息
+        app.globalData.currentUser = AV.User.current();
+        
         wx.showToast({
           title: '问卷完成！',
           icon: 'success',
           duration: 1000
         });
-        
-        // 清空临时数据
-        app.globalData.tempProfile = {};
         
         // 延迟1秒后跳转到首页
         setTimeout(() => {
@@ -96,7 +99,7 @@ Page({
         console.error('保存失败:', error);
         let errorMsg = '保存失败，请重试';
         
-        // 根据错误码提供更具体的错误信息:cite[1]
+        // 根据错误码提供更具体的错误信息
         if (error.code === 137) {
           errorMsg = '无效的数据格式，请检查填写内容';
         } else if (error.code === 1) {

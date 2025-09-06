@@ -3,7 +3,7 @@ Page({
   data: {
     nickname: '',
     genders: ['男', '女'],
-    educations: ['高中', '大专', '本科', '硕士', '博士'],
+    educations: ['小学', '初中', '高中', '大专', '本科', '硕士', '博士', '其他'],
     smokeAges: ['<1年', '1-5年', '5-10年', '10年以上'],
     gender: '',
     birthday: '',
